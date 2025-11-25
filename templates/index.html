@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐶 Dog Breed Classifier</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🐶</span>
+                <h1>Dog Breed Classifier</h1>
+            </div>
+           
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <div class="upload-box" id="uploadBox">
+                    <div class="upload-content">
+                        <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                        </svg>
+                        <h3>Drag & Drop your image here</h3>
+                        <p>or</p>
+                        <label for="fileInput" class="upload-button">Browse Files</label>
+                        <input type="file" id="fileInput" accept="image/*" hidden>
+                        <p class="upload-hint">Supports: JPG, PNG, JPEG (Max 10MB)</p>
+                    </div>
+                </div>
+
+                <!-- Preview Section -->
+                <div class="preview-section hidden" id="previewSection">
+                    <img id="previewImage" src="" alt="Preview">
+                    <button class="change-image-btn" id="changeImageBtn">Change Image</button>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div class="loading hidden" id="loading">
+                <div class="spinner"></div>
+                <p>Analyzing your dog image...</p>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section hidden" id="resultsSection">
+                <h2 class="results-title">🎯 Prediction Results</h2>
+                
+                <div class="top-prediction" id="topPrediction">
+                    <!-- Top prediction will be inserted here -->
+                </div>
+
+                <div class="other-predictions" id="otherPredictions">
+                    <!-- Other predictions will be inserted here -->
+                </div>
+
+                <button class="analyze-another-btn" id="analyzeAnotherBtn">
+                    Analyze Another Image
+                </button>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-message hidden" id="errorMessage">
+                <span class="error-icon">⚠️</span>
+                <p id="errorText"></p>
+            </div>
+        </main>
+
+
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
